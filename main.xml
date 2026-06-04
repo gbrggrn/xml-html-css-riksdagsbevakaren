@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="main_dashboard.xsl"?>
+<!-- Filename: main.xml -->
+<!-- Author: Gustaf Berggren Sörlin -->
+<!-- Date: 2026-05-03 -->
+<riks_data>
+    <title>Informationsguide - Riksdagen</title>
+    <author>Gustaf Berggren Sörlin</author>
+    <riks_staff file="transform/staff_logic.xq_out.xml"/>
+    <riks_docs file="transform/docs_logic.xq_out.xml"/>
+    <riks_votes file="transform/votes_logic.xq_out.xml"/>
+</riks_data>

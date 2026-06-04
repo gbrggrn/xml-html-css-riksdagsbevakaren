@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<!-- Filename: votes_logic.xq_out.xsd -->
+<!-- Author: Gustaf Berggren Sörlin -->
+<!-- Date: 2026-05-03 -->
+
+    <xs:element name="riks_votes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="vote" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+
+                            <xs:element name="iid">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:pattern value="[0-9]{13}"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <xs:element name="doc_id" type="xs:string"/>
+
+                            <xs:element name="result">
+                                <xs:simpleType>
+                                    <xs:restriction base="xs:string">
+                                        <xs:enumeration value="Ja"/>
+                                        <xs:enumeration value="Nej"/>
+                                        <xs:enumeration value="Avstår"/>
+                                        <xs:enumeration value="Frånvarande"/>
+                                    </xs:restriction>
+                                </xs:simpleType>
+                            </xs:element>
+
+                            <xs:element name="point" type="xs:integer"/>
+
+                            <xs:any namespace="http://riksdagsinfo.se/votes" processContents="skip" minOccurs="2" maxOccurs="2"/>
+
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,26 @@
+# --- Python & Environments ---
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# --- VS Code & IDEs ---
+.vscode/
+.idea/
+.DS_Store
+*.swp
+
+# --- Project Specific Data (Staging & Raw) ---
+extract/docs/curr_docs_raw.xml
+extract/staff/all_staff_raw.xml
+extract/votes/curr_votes_raw.xml
+extract/votes/votes_enriched.xml
+
+transform/docs_logic.xq_out.xml
+transform/staff_logic.xq_out.xml
+transform/votes_logic.xq_out.xml
+
+# --- Logs & Temp ---
+*.log
+tmp/
